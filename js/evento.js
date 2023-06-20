@@ -1,5 +1,4 @@
 
-
 class Evento {
     constructor(eventoPlano) {
         this.id = eventoPlano.id;
