@@ -11,6 +11,7 @@ class SeccionTipos {
         .then(data => {
             console.log(data);
             this.tipos = data.map(tipo => new TipoEvento(tipo.id,tipo.nameEs,callback));
+            this.tipos.unshift(new TipoEvento(0,"Todos",callback));
             this.renderSeccion();
         })
         .catch(error => console.log(error));

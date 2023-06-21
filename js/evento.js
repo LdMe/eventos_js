@@ -1,3 +1,4 @@
+import Modal from "./modal.js"
 
 class Evento {
     constructor(eventoPlano) {
@@ -29,6 +30,8 @@ class Evento {
         articulo.appendChild(img);
         articulo.appendChild(titulo);
         articulo.appendChild(date);
+
+        articulo.addEventListener("click",()=> new Modal(this));
 
         return articulo;
     }
